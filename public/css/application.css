@@ -1,0 +1,15 @@
+#title {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+  background-color: #457993;
+  height: 350px;
+  margin-top: 50px;
+}
+
+#title h1 {
+  font-family: 'Noto Serif', serif;
+  font-size: 100px;
+  color: white;
+}
