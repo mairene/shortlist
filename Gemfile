@@ -15,6 +15,7 @@ gem 'rake'
 
 gem 'shotgun'
 gem 'bcrypt-ruby'
+gem 'yelp', require: 'yelp'
 
 group :test do
   gem 'shoulda-matchers'
