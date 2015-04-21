@@ -1,3 +1,5 @@
 class List < ActiveRecord::Base
-  # Remember to create a migration!
+  has_many :selections
+  has_many :restaurants, through: :selections
+  belongs_to :user
 end
