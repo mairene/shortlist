@@ -2,5 +2,25 @@
   <link href='http://fonts.googleapis.com/css?family=Noto+Serif|Lobster|Pacifico|Playball|Satisfy&effect=outline' rel='stylesheet' type='text/css'>
 </head>
 <div id="title">
-  <h1 class="font-effect-outline">S H O R T L I S T</h1>
+  <h1 class="font-effect-shadow">ShortList</h1>
+</div>
+<div id="search_container">
+  <form class="form" action="/searchresults" method="get">
+
+    <p class="cuisine">
+        <input type="text" name="cuisine" id="cuisine" />
+        <label for="cuisine">Cuisine</label>
+    </p>
+
+    <p class="neighborhood">
+        <input type="text" name="neighborhood" id="neighborhood" />
+        <label for="neighborhood">Neighborhood</label>
+    </p>
+
+    <p class="submit">
+        <input type="submit" value="Search" />
+    </p>
+
+  </form>
+
 </div>

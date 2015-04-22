@@ -3,13 +3,68 @@
   padding: 10px;
   align-items: center;
   justify-content: center;
-  background-color: #457993;
+  background-color: #A2BCC9;
   height: 350px;
-  margin-top: 50px;
+  margin: 15px;
 }
 
 #title h1 {
-  font-family: 'Noto Serif', serif;
-  font-size: 100px;
+  font-family: 'Playball', serif;
+  font-size: 150px;
   color: white;
+}
+
+#search_container {
+  background:
+    linear-gradient(135deg, #708090 22px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px),
+    linear-gradient(225deg, #708090 22px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px)0 64px;
+  background-color:#708090;
+  background-size: 64px 128px;display: flex;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+  height: 350px;
+  margin: 15px;
+  color: white;
+}
+
+input {
+    padding: 9px;
+    border: solid 1px #E5E5E5;
+    /*outline: 0;*/
+    font: normal 13px/100% Verdana, Tahoma, sans-serif;
+    width: 200px;
+    /*background: #FFFFFF;*/
+}
+
+.form label {
+    margin-left: 10px;
+    color: #FFFFFF;
+}
+
+.submit input {
+    width: auto;
+    padding: 9px 15px;
+    background: #617798;
+    border: 0;
+    font-size: 14px;
+    /*color: #FFFFFF;*/
+}
+
+.results_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.restaurant_container {
+  border: 1px black solid;
+  padding: 10px;
+}
+
+#heading {
+  font-family: 'Playball', serif;
+  font-size: 100px;
+  color: #A2BCC9;
 }

@@ -1,0 +1,11 @@
+<h1 id="heading"><%= params[:cuisine] %> Restaurants in <%= params[:neighborhood] %></h1>
+<div class="results_container">
+  <% @businesses.each do |business|%>
+    <div class="restaurant_container"
+      <ul>
+        <li><%= business.name %></li>
+        <p class="restaurant_img"><img src="<%= business.image_url%>"></p>
+      </ul>
+    </div>
+  <% end %>
+</div>
