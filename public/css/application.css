@@ -25,7 +25,6 @@
   justify-content: center;
   height: 350px;
   margin: 15px;
-  color: white;
 }
 
 input {
@@ -67,4 +66,26 @@ input {
   font-family: 'Playball', serif;
   font-size: 100px;
   color: #A2BCC9;
+}
+
+/* DRAG AND DROP ----------------------------------------------------------------
+.gold_list_container {
+  border: dotted 1px black;
+  height: 500px;
+}
+
+#div1 {width:350px;height:70px;padding:10px;border:1px solid #aaaaaa;}*/
+
+#restaurant_column {
+  padding: 5px;
+}
+
+.restaurant_name {
+  width: 5px;
+}
+
+.trash_list_container {
+  width: 50%;
+  height: 200px;
+  border: dotted 1px gray;
 }

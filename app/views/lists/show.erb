@@ -1,0 +1,7 @@
+<div id="list_container">
+  <ul>
+    <% @lists.each do |list| %>
+    <li><%= list.cuisine %> restaurants in <%= list.neighborhood %></li>
+    <% end %>
+  </ul>
+</div>

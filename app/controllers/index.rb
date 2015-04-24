@@ -9,10 +9,10 @@ get '/searchresults' do
 
   options =  { term: 'restaurants',
               limit: 20,
-              category_filter: params[:cuisine]
+              category_filter: params[:cuisine].downcase
             }
 
-  response = client.search(params[:neighborhood], options)
+  response = client.search(params[:neighborhood].downcase, options)
   @businesses = response.businesses
   erb :search
 end
@@ -21,7 +21,7 @@ end
 
 get '/sessions/new' do
   # render sign-in page
-  @email = nil
+  @user = User.new
   erb :sign_in
 end
 
