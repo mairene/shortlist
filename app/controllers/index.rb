@@ -5,7 +5,11 @@ get '/' do
 end
 
 get '/searchresults' do
-  client = Yelp::Client.new
+  client = Yelp::Client.new ({  consumer_key: 'CV9slE8x1MwJ9YzDlvzpOw',
+                                consumer_secret: 'o8wTElEqtDrRJaxXWLQBuGaNXSE',
+                                token: 'JyiHDvNHfeDffFSksyoSyKPKqZnWZXpM',
+                                token_secret: 'yNqjYI3itCyC8SDE5HR4lD5PqeM'
+                            })
 
   options =  { term: 'restaurants',
               limit: 20,

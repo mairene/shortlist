@@ -62,7 +62,7 @@ input {
   padding: 10px;
 }
 
-#heading {
+h1#heading {
   font-family: 'Playball', serif;
   font-size: 100px;
   color: #A2BCC9;
@@ -84,7 +84,17 @@ input {
   width: 5px;
 }
 
-.trash_list_container {
+#lists {
+  display: inline;
+}
+
+div.trash_list_container {
+  width: 50%;
+  height: 200px;
+  border: dotted 1px gray;
+}
+
+div.gold_list_container {
   width: 50%;
   height: 200px;
   border: dotted 1px gray;
