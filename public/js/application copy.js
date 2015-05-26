@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
-  $('#resultscontainer').on('click', '#left-arrow' ,function(event) {
-
+  $('#left-arrow').on('click', function(event) {
+    debugger
     event.preventDefault();
 
     var row = $(this).parent().parent();
@@ -35,14 +35,16 @@ $(document).ready(function() {
 
     request.done(function(response) {
       $('div:visible.restaurant_container').first().hide();
+      $('div#trash_list_container').append('<h4>'+response.list.cuisine+' restaurants in '+response.list.neighborhood+'</h4>');
       $('div#trash_list_container').append('<p>'+response.restaurant.name+'<p>');
     });
 
   });
 
-    $('#resultscontainer').on('click', '#right-arrow', function(event) {
+    $('#right-arrow').on('click', function(event) {
     event.preventDefault();
 
+    debugger
 
     var container = $(this).parent().parent().parent().parent().parent();
     var row = $(this).parent().parent();
@@ -70,7 +72,7 @@ $(document).ready(function() {
 
     request.done(function(response) {
       container.remove();
-      $('div:visible.restaurant_container').first().hide();
+      $('div#gold_list_container').append('<h4>'+response.list.cuisine+' restaurants in '+response.list.neighborhood+'</h4>');
       $('div#gold_list_container').append('<p>'+response.restaurant.name+'<p>');
     });
 
@@ -90,30 +92,5 @@ $(document).ready(function() {
   //   event.target.appendChild(document.getElementById(data));
   // })
 // ----------------------------------------------------------------------
-var sections      = $('section');
-  var navbar        = $('#nav');
-  var navbarHeight  = navbar.height();
-
-  var sectionOffset = [];
-
-  sections.each(function() {
-    var section = $(this);
-
-        var position = section.offset().top - navbarHeight;
-        var backgroundColor = section.css("background-color");
-
-        sectionOffset.push({'postion': position,'color': backgroundColor});
-
-    });
-
-  $(window).on('scroll', function(){
-    var scrollPos = $(document).scrollTop();
-
-    $.each(sectionOffset, function(index, section){
-      if (scrollPos >= section.postion) {
-        navbar.css("background-color", section.color);
-      }
-    })
-  });
 
 });

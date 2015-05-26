@@ -1,3 +1,9 @@
+div#title > h2 {
+  font-family: 'Pacifico', serif;
+  font-size: 80px;
+  color: white;
+}
+
 #title {
   display: flex;
   padding: 10px;
@@ -47,26 +53,21 @@ input {
     background: #617798;
     border: 0;
     font-size: 14px;
-    /*color: #FFFFFF;*/
 }
 
 .results_container {
   display: flex;
+  display: inline-block;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
 }
 
 .restaurant_container {
+  margin: 50px;
   border: 1px black solid;
   padding: 10px;
 }
 
-h1#heading {
-  font-family: 'Playball', serif;
-  font-size: 100px;
-  color: #A2BCC9;
-}
 
 /* DRAG AND DROP ----------------------------------------------------------------
 .gold_list_container {
@@ -85,17 +86,33 @@ h1#heading {
 }
 
 #lists {
-  display: inline;
+  display: flex;
 }
 
-div.trash_list_container {
-  width: 50%;
-  height: 200px;
+
+div#trash_list_container {
+  width: 45%;
   border: dotted 1px gray;
+  margin: 5px;
+  padding: 10px;
 }
 
-div.gold_list_container {
-  width: 50%;
-  height: 200px;
+div#gold_list_container {
+  width: 35%;
   border: dotted 1px gray;
+  margin: 5px;
+  padding: 10px;
 }
+
+h5#trash {
+  font-family: 'Pacifico', serif;
+  font-size: 20px;
+  color: black;
+}
+
+h5#gold {
+  font-family: 'Pacifico', serif;
+  font-size: 20px;
+  color: black;
+}
+

@@ -1,8 +1,15 @@
-get '/lists' do
+get '/lists/trash' do
   @user = User.find(session[:user_id])
-  @lists = @user.lists
-  erb :'lists/show'
+  @trash_lists = @user.lists.where(trash: true)
+  erb :'/lists/trash'
 end
+
+get '/lists/gold' do
+  @user = User.find(session[:user_id])
+  @gold_lists = @user.lists.where(gold: true)
+  erb :'/lists/gold'
+end
+
 
 post '/lists/trash' do
   p 'it got to server'
@@ -50,4 +57,10 @@ post '/lists/gold' do
   else
     redirect '/'
   end
+end
+
+get '/lists/:id' do
+  @list = List.find(:id)
+  @user = User.find(id: params[:user_id])
+  erb :'/lists/show'
 end

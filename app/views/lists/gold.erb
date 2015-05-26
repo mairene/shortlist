@@ -1,0 +1,5 @@
+<ul>
+  <% @gold_lists.each do |list| %>
+    <a href="lists/:id"><li><%= list.cuisine %> in <%= list.neighborhood %></li></a>
+  <% end %>
+</ul>

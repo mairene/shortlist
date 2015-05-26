@@ -1,5 +1,5 @@
 <div id="title">
-<h1><%= params[:cuisine] %> Restaurants in <%= params[:neighborhood] %></h1>
+  <h2><%= params[:cuisine] %> Restaurants in <%= params[:neighborhood] %></h2>
 </div>
 <!-- DRAG AND DROP CONTAINERS
 <div class="gold_list_container">
@@ -9,15 +9,25 @@
 <br>
 <img id="drag1" src="http://choc.convio.net/images/content/pagebuilder/yelp_logo_no_outline_color.jpg" draggable="true" ondragstart="drag(event)" width="336" height="69">
  -->
+
+ <nav id="nav">
+    <ul>
+      <li>MENU</li>
+      <li><a href="#lists" >Lists</a></li>
+      <li><a href="#resultscontainer" >Search Results</a></li>
+    </ul>
+  </nav>
+
 <div id="lists">
-  <div class="trash_list_container">
-    <p>TRASH TRASH TRASH</p>
+  <div id="trash_list_container">
+    <a href="/lists/trash"><h5 id="trash">trash</h5></a>
   </div>
-  <div class="gold_list_container">
-    <p>GOLD GOLD GOLD</p>
+  <div id="gold_list_container">
+    <a href="/lists/gold"><h5 id="gold">gold</h5></a>
   </div>
 </div>
-<div class="results_container">
+
+<div id="resultscontainer">
   <% @businesses.each do |business|%>
     <div class="restaurant_container" draggable="true">
       <table>
